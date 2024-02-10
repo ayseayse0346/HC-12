@@ -1,0 +1,41 @@
+.yazi{
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+    width: 50vw;
+}
+
+
+.yazi1{
+    background-color: darkcyan;
+    transform: rotateX(180deg);
+}
+
+.yazi2{
+ background-color: chocolate;
+ transform: rotateY(180deg);
+}
+
+.yazi3{
+    background-color: red;
+    transform: rotate(30deg); 
+    /* başından sabitlemek istersek aşağıdki transform origin left veya right */
+    /* transform-origin: left; */
+    transform-origin: right;
+
+}
+
+.yazi4{
+    background-color: fuchsia;
+
+}
+
+.yazi5{
+    background-color: olive;
+
+}
+
+.yazi6{
+    background-color: darkgoldenrod;
+
+}
