@@ -1,0 +1,47 @@
+.outher{
+background-color: brown;
+width: 500px;
+height: 500px;
+}
+
+.inner{
+background-color: gray;
+width: 50%;
+height: 50%;
+
+animation-name: travel;
+animation-duration: 2s;
+animation-timing-function: ease-in-out;
+animation-delay: 1s;  /*geciktirme*/
+animation-iteration-count:3 ;  /* kaç tekrarda yapacak onu ayarladık  infinitive yaparsak sonsuz tekrar eder.*/
+animation-direction: alternate; /* gittiği yerden tekrar ettiriyor.*/
+
+/* bittikten sonra bittiği yerde kalması için animation fill mode forward  backward var o da başladığı rengi 3 saniye sonra döner başlangıç zamanının değerlerini yerdirmek için kullanır. . both ise ikisinin de özelliğini verir.*/
+/* animation-fill-mode: forwards; */
+animation-fill-mode: both;
+
+/* animation: travel 2s ease 1s 3 alternate both;
+ tek satırda yapmak için bu  */
+}
+
+@keyframes travel {  /* bu travel ismini kedndimiz verdik */
+    /* dört farklı zamana böldük */
+    0%{  /* başlangıç zamanı */
+transform: translate(0);
+background-color: yellow; /*başlangıç zamanında sarı olsun */
+    }
+
+    25% {
+        transform: translateY(100%);
+        border-radius: 50%;
+      }
+    
+      50% {
+        transform: translate(100%, 100%);
+      }
+    
+      100% {
+        transform: translateX(100%);
+        background-color: fuchsia;
+      }
+    }
