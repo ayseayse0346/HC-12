@@ -115,7 +115,7 @@ body{
   background-color: darkcyan;
   transform: rotateX(180deg);
 }
-.yazi1:active .yazi2:active {
+.yazi1:active + .yazi2 {
   background-color: gold;
 }
 
@@ -183,16 +183,59 @@ img{
 }
 
 .x{
-    transform: translateX(150px);
+    /* transform: translateX(150px); */
+    transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(0.61,-0.92, 0.53, 2.37);
+}
+.x:active{
+    transform: translateX(250px);
+    /* background-color: orange; */
+    /* width: 300px; */
+}
+
+.y{
+    transition: all 2s ease-in-out;
 }
 
 .y:active{
     background-color: magenta;
-    transform: translateY(120px);
+    transform: translateY(200px);
     height: 100px;
+}
+
+.xy{
+    transition-property: all ;
+    transition-duration: 2s;
+
 }
 
 .xy:active{
     transform: translate(100px, 50px);
     background-color: blue;
+    width: 200px;
+    height: 100px;
+}
+
+.btn-div{
+    text-align: center;
+}
+
+.btn{
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.3rem;
+    /* transition-property:  background-color ;
+    transition-duration: 1s; */
+    transition: all 200ms ease-in-out;
+}
+
+
+.btn:active{
+    background-color: red;
+    color: wheat;
+    transform: scale(95%);
 }
