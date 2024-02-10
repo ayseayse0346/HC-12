@@ -1,4 +1,4 @@
-body{
+/* body{
     height: 200px;
 }
 
@@ -27,20 +27,20 @@ body{
 }
 .yazi3:active{
     /* tıklayınca bu özellikler geliyor. */
-    background-color: red;
-    transform: rotate(30deg) scale(1.5); /* hem rotate hem scale aynı anda yapmak istesek bu şekilde yan yana gelmeli ama alt alta yazarsak en son hangisini yazmışsak onu yapr.*/
+    /* background-color: red;
+    transform: rotate(30deg) scale(1.5); hem rotate hem scale aynı anda yapmak istesek bu şekilde yan yana gelmeli ama alt alta yazarsak en son hangisini yazmışsak onu yapr. */
     /* başından sabitlemek istersek aşağıdki transform origin left veya right */
     /* transform-origin: left; */
-    transform-origin: right;
+    /* transform-origin: right; */
 
-}
+/* } */
 
 
 /*--------- TRANSFORM SCALE-------------- */
 /* BOYUTLANSIRMA İÇİN KULLANILIR. */
 
 
-.yazi4{
+/* .yazi4{
     background-color: fuchsia;
 transform: scaleX(1.5);
 }
@@ -69,7 +69,7 @@ img{
 
 
 /* --------------- TRANSFORM-TRANSLATE-------- !hareket ettirmek */
-
+/* 
 .box{
 background-color: pink;
 width: 100px;
@@ -78,13 +78,121 @@ margin: 2px;
 }
 
 .x{
-transform: translateX(150px);
+transition-property: transform;
+
+}
+
+.x:active{
+    transform: translateX(150px);
 }
 .y{
     background-color: chocolate;
-transform: translateY(120px);
-}
-.xy:active{
+transform: translateY(120px); */
+
+/* .xy:active{
 background-color: blueviolet;
 transform: translate(100px,50px); /* x ve y ekseninde tıklayınca yerleri değişiyor*/
+/* } */
+
+body{
+    height: 200vh;
+}
+
+.yazi {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem auto;
+  width: 50vw;
+}
+
+/* ---------------------------------- */
+/*          TRANSFORM _ROTATE         */
+/* ---------------------------------- */
+/* rotate içinde ... degree (deg) olarak değer verilir */
+/* 90 ve 270 deerelecelerde yazılar tam dik olduklarından ve 3 boyutlu olarak bakamadığımız için gözükmezler */
+
+.yazi1 {
+  background-color: darkcyan;
+  transform: rotateX(180deg);
+}
+.yazi1:active .yazi2:active {
+  background-color: gold;
+}
+
+.yazi2 {
+  background-color: skyblue;
+  transform: rotateY(180deg);
+}
+
+.yazi3 {
+  background-color: red;
+}
+.yazi3:active {
+  background-color: red;
+  /* transform-origin: right; */
+  transform: rotate(30deg) scale(1.5);
+  position: relative;
+  z-index: 2;
+  /* transform-origin: 20%; */
+}
+
+/* ---------------------------------- */
+/*          TRANSFORM SCALE           */
+/* ---------------------------------- */
+
+/* boyutlandırma için kullanılır */
+
+.yazi4 {
+  background-color: fuchsia;
+  /* rotate: 30deg; */
+  transform: scaleX(1.5);
+}
+
+.yazi5 {
+  background-color: olive;
+  transform: scaleY(2);
+}
+
+.yazi6 {
+  background-color: darkgoldenrod;
+}
+
+.yazi6:active {
+  background-color: darkgoldenrod;
+  transform: scale(3);
+}
+
+img{
+    transform: skewX(85deg);
+    transform: skewY(85deg);
+    transform: skew(30deg, 30deg);
+}
+
+/* ---------------------------------- */
+/*          TRANSFORM TRANSLATE       */
+/* ---------------------------------- */
+
+/* Translate öteleme hareket ettirmek için kullanılır */
+
+
+.box{
+    background-color: crimson;
+    width: 100px;
+    height: 50px;
+    margin: 2px;
+}
+
+.x{
+    transform: translateX(150px);
+}
+
+.y:active{
+    background-color: magenta;
+    transform: translateY(120px);
+    height: 100px;
+}
+
+.xy:active{
+    transform: translate(100px, 50px);
+    background-color: blue;
 }
